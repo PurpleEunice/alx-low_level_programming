@@ -1,27 +1,28 @@
 #include <stdio.h>
-
-
-
+#include <stdlib.h>
+#include <time.h>
 /**
- *
- * * main - print the string in the put function
- *
- * *
- *
- * * Description: using the main function
- *
- * * this program prints "Programming is like building a multilingual puzzle
- *
- * * Return: 0
- *
- * */
-
+ * main - entry point
+ * Description: prints  if a number is positive or negative.
+ * Return: 0
+ */
 int main(void)
-
 {
+	int n;
 
-		puts("\"Programming is like building a multilingual puzzle");
-
-			return (0);
-
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+	{
+		printf("%d is positive\n", n);
+	}
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+	return (0);
 }
