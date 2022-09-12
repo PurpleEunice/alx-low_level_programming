@@ -2,8 +2,9 @@
 
 /**
  * main - Entry point
- * Return: Alays 0 (Success)
- * */
+ * Description: prints char below 10
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	printf("Size of a char: %zu byte(s)\n", sizeof(char));
