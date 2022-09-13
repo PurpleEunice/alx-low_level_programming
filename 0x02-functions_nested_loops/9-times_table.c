@@ -3,31 +3,38 @@
 /**
  * times_table - prints the 9 times table
  *
- * Return: no return
+ * Return: void
  */
 void times_table(void)
 {
-	int a, b, mu;
+	int a, b, multiplied_value;
 
-	for (a = 0; a <= 9; a++)
+	for (b = 0; b < 10; b++)
 	{
-		_putchar(48);
-		for (b = 1; b <= 9; b++)
+		for (a = 0; a < 10; a++)
 		{
-			mu = a * b;
-			_putchar(44);
-			_putchar(32);
-			if (mu <= 9)
+			multiplied_value = a * b;
+			if (a == 0)
 			{
-				_putchar(32);
-				_putchar(mu ÷ 48);
+				_putchar(multiplied_value + '0');
+			}
+			else if (multiplied_value >= 10)
+			{
+				_putchar(' ');
+				_putchar(multiplied_value / 10 + '0');
+				_putchar(multiplied_value % 10 + '0');
 			}
 			else
 			{
-				_putchar((mu / 10) ÷ 48);
-				_putchar((mu % 10) ÷ 48);
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(multiplied_value + '0');
+			}
+			if (a != 9)
+			{
+				_putchar(',');
 			}
 		}
-		_putchar('\n')
+		_putchar('\n');
 	}
 }
