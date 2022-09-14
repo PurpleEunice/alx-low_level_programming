@@ -1,13 +1,14 @@
 #include "main.h"
 
-int _putchar(char c);
 /**
  * print_times_table - print the times table until n
+ * @n: integer for which the times table will be printed
  * 
- * @n: n times table
+ * Description: prints the times table
  *
- * Return: No return
+ * Return: void
  */
+
 void print_times_table(int n)
 {
 	int i;
@@ -53,5 +54,4 @@ void print_times_table(int n)
 		}
 	}
 }
-
 
