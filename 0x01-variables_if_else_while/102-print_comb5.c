@@ -1,41 +1,49 @@
 #include <stdio.h>
-#include <unistd.h>
-
+/* more headers goes there */
+/* betty style doc for function main goes there */
 /**
  * main - Entry point
- * Description: prints all possible combination of 2-digit numbers
- * Return: Always 0 (success)
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int c, i, k, j;
+	int p = 48, q = 48, y = 48, x = 49;
 
-	for (c = 48; c <= 57; c++)
+	while (p < 58)
 	{
-		for (k = 48; k <= 57; k++)
+		while (q < 58)
 		{
-			for (j = 48; j <= 57; j++)
+			while (y < 58)
 			{
-				if (((k + j) > (c + i) &&  k >= c) || c < k)
+				while (x < 58)
 				{
-					putchar(c);
-					putchar(i);
+					putchar(p);
+					putchar(q);
 					putchar(' ');
-					putchar(k);
-					putchar(j);
-
-					if (c + i + k + j == 227 && c == 57)
-					{
-						break;
-					}
-					else
+					putchar(y);
+					putchar(x);
+					if (!(p == 57 &&
+								q == 56 &&
+								y == 57 &&
+								x == 57))
 					{
 						putchar(',');
 						putchar(' ');
 					}
+					x++;
 				}
+				y++;
+				x = 48;
 			}
+			q++;
+			q = p;
+			x = q + 1;
 		}
+		p++;
+		q = 48;
+		y = p;
+		x = q+ 1;
 	}
 	putchar('\n');
 	return (0);
