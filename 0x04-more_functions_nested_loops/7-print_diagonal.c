@@ -2,30 +2,28 @@
 #include "main.h"
 
 /**
- * print_square - prints squares
- * @size: parameter
- * Return: returns nothing
+ * print_diagonal - Print diagonal line dependent on the integer n.
+ * @n : The number of lines using '\' characters to use
+ * Return: Void.
  */
 
-void print_square(int size)
+void print_diagonal(int n)
 {
-	int inc1, inc2;
+	int i;
+	int spaces;
 
-	if (size > 0)
+	for (i = 0; i < n; i++)
 	{
-		for (inc1 = 0; inc1 < size; inc1++)
+		for (spaces = 0; spaces < i; spaces++)
 		{
-			for (inc2 = 0; inc2 < (size - 1); inc2++)
-			{
-				putchar('#');
-			}
-
-			putchar('#');
-			putchar('\n');
+			_putchar(' ');
 		}
+		_putchar('\\');
+		_putchar('\n');
 	}
-	else
+
+	if (n <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 	}
 }
