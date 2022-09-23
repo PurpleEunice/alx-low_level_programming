@@ -16,7 +16,7 @@ void print_number(int n)
 	}
 	else
 	{
-		m = n * -1;
+		m = n;
 	}
 
 	d = m;
