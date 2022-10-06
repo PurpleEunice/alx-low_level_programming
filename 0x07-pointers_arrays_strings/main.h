@@ -1,11 +1,19 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 /**
+<<<<<<< HEAD
  * Here - you will find all the prototypes of my codes
  * Do make sure to folow my github and connect with me on my socials
  * Twitter: @the_unique_unix#
  * Linkedin: eunice-oke
  */
+=======
+* Here - you will find all the prototypes of my codes
+* Do make sure to folow my github and connect with me on my socials
+* Twitter: @the_unique_unix#
+* Linkedin: eunice_oke
+*/
+>>>>>>> d168336322253af6be4ccc15bbe05d41eb9c3961
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_memset(char *s, char b, unsigned int n);
 char *_strchr(char *s, char c);
